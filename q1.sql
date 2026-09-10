@@ -1,4 +1,5 @@
 -- Question 1 : Écrivez votre requête SQL ici
+-- Manuel Jarry 2375616, 10 septembre 2026
 
 SELECT
        P.nom,
