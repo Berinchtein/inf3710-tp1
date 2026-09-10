@@ -1,11 +1,10 @@
 -- Question 2 : Écrivez votre requête SQL ici
 -- Manuel Jarry 2375616, 10 septembre 2026
 
-SELECT
-       P.nom        AS 'nom_base',
-       E.methode    AS 'nom_evolution'
+SELECT PB.nom    AS 'nom_base',
+       E.methode AS 'nom_evolution'
 
-  FROM POKEMON    P
-  JOIN EVOLUTIONS E ON E.id = P.id
+  FROM EVOLUTIONS E
+  JOIN POKEMON    PB ON PB.id = E.pokemon_base_id
 
- WHERE P.type_principal = 'Feu';
+ WHERE PB.type_principal = 'Feu';
